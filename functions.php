@@ -1,10 +1,9 @@
 <?php
-add_action( 'wp_enqueue_scripts', function() {
-    //* Parent CSS
-    wp_enqueue_style( 'parent-styles', 
-      get_template_directory_uri() . '/style.css' );
+define('THEME_ROOT', get_stylesheet_directory());
 
-    //* Child CSS
-    wp_enqueue_style( 'child-styles', 
-      get_stylesheet_directory_uri() . '/style.css', [ 'parent-styles' ] );
-} );
+require_once(THEME_ROOT . '/build/options.php');
+
+define('IS_PRODUCTION', OPTIONS['isProduction']);
+
+require_once(THEME_ROOT . '/wordpress/includes.php');
+
