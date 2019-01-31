@@ -1,10 +1,9 @@
-export default class ManualData {
-    constructor(data) {
-        this.data = data;
-    }
 
-    get(namespace, item) {
-        let data = this.data && this.data[namespace];
+export default class ManualData {
+    async get(namespace, item) {
+
+        let data = (await import(`@/data/manual-database/${namespace}`)).default;
+            
         if (data && item)
             data = data[item];
 
