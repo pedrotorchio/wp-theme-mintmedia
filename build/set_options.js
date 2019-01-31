@@ -8,9 +8,7 @@ var options = require(fileName);
 
 options.isProduction = argv.mode == 'PRODUCTION';
 
-fs.writeFile(fileName, JSON.stringify(options, null, 2), function (err) {
-  if (err) return console.log(err);
+console.log('Setting options:');
+console.log(JSON.stringify(options));
 
-  console.log('Setting options:');
-  console.log(JSON.stringify(options));
-});
+fs.writeFileSync(fileName, JSON.stringify(options, null, 2));
