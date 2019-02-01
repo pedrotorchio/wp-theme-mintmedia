@@ -1,7 +1,9 @@
 <script>
 import Logo from '@/components/Logo'
+import Player from '@/components/VideoPlayer'
+
 export default {
-    components: { Logo },
+    components: { Logo, Player },
     data: () => ({
         info: null,
         excerpt: ''
@@ -37,8 +39,10 @@ export default {
 <template lang="pug">
     #hero.max-width
         //- iframe( v-if = "info && iframeSrc" :src = "iframeSrc" @onload = "iframeLoaded" )
-        video( v-if = "info" playsinline autoplay muted loop )
-            source( :src="videoSrc" type="video/mp4" )
+        player( v-if = "info" :video = "videoSrc" )
+        //- video( v-if = "info" playsinline autoplay muted loop )
+        //-     source( :src="videoSrc" type="video/mp4" )
+        
 
         .cta.horizontal-center
             logo.logo
@@ -51,10 +55,12 @@ export default {
 @import '~@/styles/config'
 #hero
     position: relative
-
-video
-    z-index: 55
+    height: 100vh
     width: 100%
+    overflow: hidden
+
+.admin-bar #hero
+    height: calc(100vh - 32px)
 
 .cta
     z-index: 56
