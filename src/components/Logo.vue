@@ -10,8 +10,6 @@ export default {
 <style lang="sass">
 .logo-container
     position: relative
-    padding-bottom: 100%
-    width: 100%
     outline: 1px solid red
 svg
     position: absolute
