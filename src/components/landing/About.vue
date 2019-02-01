@@ -31,7 +31,7 @@ section
     margin-top: -5px
     background-image: url('#{$url--uploads}/02/photographer-1-600x407.jpg')
     background-repeat: no-repeat
-    background-position: right
+    background-position: right top
     background-size: contain
 
 

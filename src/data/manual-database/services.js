@@ -17,7 +17,7 @@ export default {
                 placeholder: "/wp-content/uploads/2019/02/service-photo-e1549027220499-60x30.jpg"
             },
             "video": {
-                url: "http://local.mintdesign.media/wp-content/uploads/2019/02/service-vid-marketing.mp4"
+                url: "http://local.mintdesign.media/wp-content/uploads/2019/02/service-vid-video.mp4"
             },
             "title" : "Video Marketing",
             "text": "Marketers who use video grow revenue 49% faster than non-video users."

@@ -1,12 +1,14 @@
 <script>
 import Hero from '@/components/landing/Hero';
 import About from '@/components/landing/About';
+import Services from '@/components/landing/Services';
 
 export default {
   name: "home",
   components: {
     Hero,
     About,
+    Services
   }
 };
 </script>
@@ -15,7 +17,7 @@ export default {
   .home
     hero
     about
-    //- services
+    services.bg-paint.primary
     //- portifolio
     //- testimonials
 </template>

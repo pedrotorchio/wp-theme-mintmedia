@@ -8,12 +8,11 @@ export default {
             type: String,
             default: 'url'
         },
-        arguments: {
-            type: Object,
-            default: ()=>({})
-        }
     },
     computed: {
+        el() {
+            return this.$refs['video'];
+        },
         value() {
             let value = ''
             switch( this.type ) {
@@ -23,6 +22,18 @@ export default {
             }
 
             return value;
+        },
+        videoArguments() {
+            let {type, video, ...attrs} = this.$attrs
+
+            let args = Object.assign({
+                playsinline: true,
+                autoplay: true,
+                muted: true,
+                loop: true
+            }, attrs);
+
+            return args;
         }
     },
     methods: {
@@ -36,7 +47,7 @@ export default {
 <template lang="pug">
     div.video-container
         template( v-if = "video" )
-            video.video( v-if = "type == 'url'" playsinline autoplay muted loop )
+            video.video( ref = "video" v-if = "type == 'url'" v-bind = "videoArguments" )
                 source( :src="value[0]" :type="value[1]" )
 </template>
 <style lang="sass" scoped>
