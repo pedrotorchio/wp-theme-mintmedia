@@ -16,10 +16,15 @@ export default {
 </template>
 <style lang="sass" scoped>
 @import '~@/styles/config'
-$size: 100px
+$size: $size--header-height
 
 header
-    background-color: $color--secondary
+    position: fixed
+    top: 0
+    width: 100%
+
+.admin-bar header
+    top: 32px
 .limited-width
     display: flex
     align-items: center

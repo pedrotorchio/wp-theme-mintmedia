@@ -17,10 +17,18 @@ export default {
                 router-link( :to = "item.to") {{ item.title }}
 </template>
 <style lang="sass" scoped>
+@import "~@/styles/config"
 ul
     padding: 0
     margin: 0
     text-align: center
     li 
         list-style: none
+
+        a
+            color: $color--secondary
+            text-transform: uppercase
+            font-weight: 100
+            &:hover
+                color: $color--highlight
 </style>
