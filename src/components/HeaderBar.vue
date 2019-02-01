@@ -15,7 +15,11 @@ export default {
             social.social( dir = "V")
 </template>
 <style lang="sass" scoped>
+@import '~@/styles/config'
 $size: 100px
+
+header
+    background-color: $color--secondary
 .limited-width
     display: flex
     align-items: center
