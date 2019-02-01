@@ -2,19 +2,22 @@
 
 
 *
-    outline: 1px solid rgba(red, .5)
+    // outline: 1px solid rgba(red, .5)
 
 body
     margin: 0
     padding: 0
     font-family: Thasadith, sans-serif
-#app
-    margin-top: $size--header-height
+    font-size: $size--text
 
-.limited-width
+.limited-width, .max-width, .narrow
     max-width: 1200px
     margin-left: auto
     margin-right: auto
+.narrow
+    max-width: 1024px
+.max-width
+    max-width: 1800px
 
 a
     text-decoration: none
@@ -24,3 +27,17 @@ a
     &:hover
         color: $color--secondary
         transition: color $time--transition
+
+.horizontal-center
+    left: 50%
+    transform: translateX(-50%)
+
+section
+    padding: 100px 0
+
+.section-title
+    color: $color--text
+    font-family: impact
+    letter-spacing: .1em
+    text-transform: uppercase
+    font-size: $size--header

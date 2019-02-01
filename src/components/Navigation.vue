@@ -26,7 +26,7 @@ ul
         list-style: none
 
         a
-            color: $color--secondary
+            color: white //$color--secondary
             text-transform: uppercase
             font-weight: 100
             &:hover

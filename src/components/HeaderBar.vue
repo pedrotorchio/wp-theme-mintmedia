@@ -19,6 +19,7 @@ export default {
 $size: $size--header-height
 
 header
+    z-index: 555
     position: fixed
     top: 0
     width: 100%
@@ -30,7 +31,7 @@ header
     align-items: center
     height: $size
 .logo
-    height: $size
+    padding-bottom: $size
     width: $size
     flex: 0 0 auto
 

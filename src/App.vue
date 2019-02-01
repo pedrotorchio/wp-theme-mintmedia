@@ -9,7 +9,7 @@ export default {
 <template lang="pug">
   #app
     header-bar
-    //- router-view
+    router-view
     //- footer-section
 
 </template>
