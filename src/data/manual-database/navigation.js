@@ -16,10 +16,11 @@ export default {
     main: [
         new MenuItem('Home', '/')
     ],
-    social: [
-        new SocialItem('Facebook', 'facebook', '#'),
-        new SocialItem('Twitter', 'twitter', '#'),
-        new SocialItem('Instagram', 'instagram', '#'),
-        new SocialItem('Pinterest', 'pinterest', '#')
-    ]
+    social: {
+        'facebook': new SocialItem('Facebook', 'facebook', '#'),
+        'twitter': new SocialItem('Twitter', 'twitter', '#'),
+        'instagram': new SocialItem('Instagram', 'instagram', '#'),
+        'pinterest': new SocialItem('Pinterest', 'pinterest', '#'),
+        'vimeo': new SocialItem('Vimeo', 'vimeo', 'https://vimeo.com/mintmediadesign')
+    }
 }

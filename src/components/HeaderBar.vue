@@ -31,8 +31,9 @@ header
     align-items: center
     height: $size
 .logo
-    padding-bottom: $size
+    
     width: $size
+    height: $size
     flex: 0 0 auto
 
 .navigation

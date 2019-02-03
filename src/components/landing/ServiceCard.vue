@@ -9,24 +9,55 @@ export default {
             required: true
         }
     },
+    computed: {
+        type() {
+            return this.service.type
+        },
+        isVideo() {
+            return Boolean(this.service.video || !this.type)
+        },
+        classes() {
+            let classes = []
+
+            classes.push((() => {
+
+                let classe = 'no-bg'
+                if (this.isVideo)
+                    classe = 'is-video'
+                else if (this.service.img)
+                    classe = 'is-img'
+
+                return classe;
+ 
+            })());
+            
+            return classes
+        }
+
+    },
     methods: {
         hover(e) {
-            this.$refs["video"].el.play()
+            if (this.$refs["video"])
+                this.$refs["video"].el.play()
         },
         out() {
-            this.$refs["video"].el.pause()
+            if (this.$refs["video"])
+                this.$refs["video"].el.pause()
         }
     }
 }
 </script>
 
 <template lang="pug">
-    article( @mouseover = "hover" @mouseout = "out")
-        div.textual
-            h3.title( ref = "title") {{ service.title }}
-            p.text {{ service.text }}
-        player.video( ref = "video" :video = "service.video.url" :autoplay = "false" )
-        //- lazy-img.img( :src = "service.img.medium" :src-placeholder = "service.img.placeholder" :hoverable = "false")
+    article( @mouseover = "hover" @mouseout = "out" :class="classes" )
+        .overlay
+            slot
+                .title-text
+                    h3.title( ref = "title") {{ service.title }}
+                    p.text {{ service.text }}
+        player.video( v-if = "isVideo" ref = "video" :video = "service.video" :autoplay = "false" )
+        lazy-img.img( v-else-if = "service.img" :src = "service.img.medium" :src-placeholder = "service.img.placeholder" :hoverable = "false")
+
 </template>
 
 <style lang="sass" scoped>
@@ -35,10 +66,15 @@ export default {
 article
     position: relative
     overflow: hidden
-.textual
+.overlay
     position: absolute
-    bottom: 1em
+    height: 100%
+    width: 100%
     z-index: 5
+
+.title-text
+    position: absolute    
+    bottom: 1em
     width: 80%
     height: 50%
     left: 10%

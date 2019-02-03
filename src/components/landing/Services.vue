@@ -44,9 +44,6 @@ section
     &.shown
         transform: translateX($offset)
 
-h2
-    margin-bottom: $space
-
 .service
     height: $item-height
     width: 2*$item-height
@@ -57,7 +54,8 @@ h2
     position: absolute
     bottom: $size--section-padding
     left: 25%
-    transform: translateX(-50%)
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
     height: $size
     width: $size
 

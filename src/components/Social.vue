@@ -18,7 +18,7 @@ export default {
 <template lang="pug">
     nav.social( :class = "[ dir == 'V' ? 'vertical' : 'horizontal' ]" )
         ul
-            li( v-for = "(social, i) in items")
+            li( v-for = "(social, i) in items" :key = "i" )
                 a( :href = "social.url") {{ social.title }}
 </template>
 <style lang="sass" scoped>

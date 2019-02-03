@@ -2,6 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
+import Btn from '@/components/Button'
+Vue.component('btn', Btn);
+
 import Store from '@/plugins/DataFetcher';
 Vue.use(Store);
 

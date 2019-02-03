@@ -18,14 +18,12 @@ export default {
     section
         .narrow
             h2.section-title About Us
-            p( v-html = "excerpt")
+            p.section-squeeze-text( v-html = "excerpt")
             butt-on( to = "/about" )
 </template>
 <style lang="sass" scoped>
 @import '~@/styles/config'
-p
-    width: 500px
-    line-height: 2em
+
 section
     position: relative
     margin-top: -5px
