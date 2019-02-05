@@ -1,16 +1,16 @@
 <script>
 import HeaderBar from '@/components/HeaderBar'
-// import FooterSection from '@/components/FooterSection'
-
+import FooterBar from '@/components/Footer';
 export default {
-  components: { HeaderBar }
+  components: { HeaderBar, FooterBar }
 }
 </script>
 <template lang="pug">
   #app
     header-bar
     router-view
-    //- footer-section
+    footer-bar
+    
 
 </template>
 <style lang="sass" src="@/styles/_global.sass"></style>

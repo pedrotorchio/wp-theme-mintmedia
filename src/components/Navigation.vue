@@ -25,10 +25,9 @@ ul
     li 
         list-style: none
 
-        a
-            color: white //$color--secondary
-            text-transform: uppercase
-            font-weight: 100
-            &:hover
-                color: $color--highlight
+a
+    color: white
+    text-transform: uppercase
+    font-weight: 100
+            
 </style>

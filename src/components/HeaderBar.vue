@@ -12,7 +12,7 @@ export default {
         .limited-width
             logo.logo
             navigation.navigation
-            social.social( dir = "V")
+            social.social( )
 </template>
 <style lang="sass" scoped>
 @import '~@/styles/config'
@@ -23,6 +23,7 @@ header
     position: fixed
     top: 0
     width: 100%
+    background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%)
 
 .admin-bar header
     top: 32px

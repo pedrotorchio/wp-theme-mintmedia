@@ -11,6 +11,9 @@ Vue.use(Store);
 import LazyImg from 'vue-hoverable-lazy-image';
 Vue.component('lazy-img', LazyImg);
 
+import svgIcon from 'vue-svgicon'
+Vue.use(svgIcon)
+
 Vue.config.productionTip = false;
 
 new Vue({

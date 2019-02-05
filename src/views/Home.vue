@@ -13,7 +13,8 @@ export default {
     Services,
     Portifolio,
     Testimonials
-  }
+  },
+  
 };
 </script>
 

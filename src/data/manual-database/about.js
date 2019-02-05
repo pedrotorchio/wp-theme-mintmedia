@@ -14,5 +14,9 @@ export default {
     We understand that digital is not just a website, social media, or a banner ad. It’s about your brand and making it come alive online. 
     We strive to bring the message to your audience for maximum success, integrated across all media. When we say full service, we mean it: from design, to copy, to analytics, we do what it takes to get results for your business.`,
     work: `All our projects represent our commitment and dedication to excellence. These productions display our passion to create moving works that allows clients to be supplied with content that inspire success. 
-    So, check out our featured work.`
+    So, check out our featured work.`,
+    copyrights: `© 2017 BY MINT MEDIA ALL RIGHTS RESERVED`,
+    phone: `(401) 371 6468`,
+    email: `INFO@MINTDESIGN.MEDIA`,
+    address: `BRISTOL, RHODE ISLAND 02809`
 }
