@@ -54,3 +54,31 @@ section
     text-transform: uppercase
     font-size: $size--header
     margin: 2*$size--text 0
+
+.arrow
+    $color: rgba(255, 255, 255, 0.17)
+    $width: 4px
+    $size: 30px
+
+    display: block
+    width: $size
+    height: $size
+    border: $width solid transparent
+
+    border-bottom-color: $color
+
+    =arrow($dir)
+
+        @if $dir == -1
+            border-left-color: $color
+            
+        @if $dir == 1
+            border-right-color: $color
+            
+
+        transform: rotateZ(#{ -$dir * 45deg})
+    &.left
+        +arrow(-1)
+    &.right
+        +arrow(1)
+        
